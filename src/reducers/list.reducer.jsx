@@ -1,4 +1,4 @@
-import { SET_LIST_DISPLAY } from "../action/list.action";
+import { SET_LIST_DISPLAY } from "../actions/list.action";
 
 const initialState = { showList: false };
 

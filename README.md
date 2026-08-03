@@ -1,21 +1,36 @@
-# React + Vite
+# Crypto Data Tracking
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application React permettant de consulter les 250 principales
+cryptomonnaies par capitalisation.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Données globales du marché
+- Classement des cryptomonnaies
+- Recherche et filtres
+- Tri des colonnes
+- Gestion des favoris
+- Graphiques de prix
+- Variations sur plusieurs périodes
+- Interface responsive
 
-## React Compiler
+## Technologies
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React
+- Redux Toolkit
+- Recharts
+- Axios
+- Sass
+- CoinGecko API
 
-Note: This will impact Vite dev & build performances.
+## Installation
 
-## Expanding the ESLint configuration
+npm install
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Démonstration
+
+Lien vers l’application déployée
 
 # DATA
 

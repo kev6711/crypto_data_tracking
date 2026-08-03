@@ -1,36 +1,52 @@
 export const isStableCoin = (coin) => {
-  let stables = [
-    "usdt",
-    "usdc",
-    "busd",
-    "dai",
-    "ust",
-    "mim",
-    "tusd",
-    "usdp",
-    "usdn",
-    "fei",
-    "tribe",
-    "gusd",
-    "frax",
-    "lusd",
-    "husd",
-    "ousd",
-    "xsgd",
-    "usdx",
-    "eurs",
-    "cusdc",
-    "cdai",
-    "usdd",
-    "ibeur",
-    "eurt",
-    "flexusd",
-    "alusd",
-    "susd",
-  ];
-  if (stables.includes(coin)) {
-    return false;
-  } else {
-    return true;
-  }
+    let stables = [
+        "usdt",
+        "usdc",
+        "busd",
+        "dai",
+        "ust",
+        "mim",
+        "tusd",
+        "usdp",
+        "usdn",
+        "fei",
+        "tribe",
+        "gusd",
+        "frax",
+        "lusd",
+        "husd",
+        "ousd",
+        "xsgd",
+        "usdx",
+        "eurs",
+        "cusdc",
+        "cdai",
+        "usdd",
+        "ibeur",
+        "eurt",
+        "flexusd",
+        "alusd",
+        "susd",
+        "figr_heloc",
+        "usds",
+        "usd1",
+        "usde",
+        "usdg",
+        "usyc",
+        "buidl",
+        "pyusd",
+        "usdy",
+        "rlusd",
+        "usdf",
+        "bfusd",
+        "usdgo",
+        "usdo",
+        "usx",
+        "avusd",
+    ];
+    if (stables.includes(coin)) {
+        return false;
+    } else {
+        return true;
+    }
 };

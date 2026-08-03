@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PercentChange from "./PercentChange";
-import TableFilers from "./TableFilers";
+import TableFilers from "./TableFilters";
 
 const HeaderInfos = () => {
     const [headerData, setHeaderData] = useState([]);
