@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const StarIcon = ({ coinId }) => {
     const [like, setLike] = useState(false);
@@ -8,9 +8,11 @@ const StarIcon = ({ coinId }) => {
             let favList = window.localStorage.coinList.split(",");
             if (favList.includes(coinId)) {
                 setLike(true);
+            } else {
+                setLike(false);
             }
         }
-    }, []);
+    }, [coinId]);
 
     const idChecker = (id) => {
         let favList = null;
