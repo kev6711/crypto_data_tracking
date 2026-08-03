@@ -1,10 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy Vite app to GitHub Pages
 
 on:
     push:
         branches:
             - main
-
     workflow_dispatch:
 
 permissions:
@@ -22,37 +21,39 @@ jobs:
 
         steps:
             - name: Récupérer le dépôt
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
 
             - name: Installer Node.js
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v5
               with:
-                  node-version: 22
+                  node-version: 24
                   cache: npm
 
             - name: Installer les dépendances
               run: npm ci
 
-            - name: Construire l'application
+            - name: Construire l’application
               run: npm run build
 
             - name: Configurer GitHub Pages
               uses: actions/configure-pages@v5
+              with:
+                  enablement: true
 
-            - name: Importer le build
-              uses: actions/upload-pages-artifact@v3
+            - name: Importer le site
+              uses: actions/upload-pages-artifact@v4
               with:
                   path: ./dist
 
     deploy:
+        needs: build
+        runs-on: ubuntu-latest
+
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
 
-        runs-on: ubuntu-latest
-        needs: build
-
         steps:
-            - name: Déployer sur GitHub Pages
+            - name: Déployer
               id: deployment
               uses: actions/deploy-pages@v4
